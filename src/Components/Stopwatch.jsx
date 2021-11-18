@@ -42,11 +42,11 @@ const StopWatch = () => {
                     </div>
                     <div className="buttons">
                         {!isPaused ? (
-                            <button onClick={handleStart}>Start</button>
+                            <button className="btn" onClick={handleStart}>Start</button>
                         ) : (
-                            <button onClick={handlePause}>Pause</button>
+                            <button className="btn" onClick={handlePause}>Pause</button>
                         )}
-                        <button onClick={handleReset}>Reset</button>
+                        <button className="btn" onClick={handleReset}>Reset</button>
                     </div>
                 </div>
             </div>

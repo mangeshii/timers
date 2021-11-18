@@ -7,6 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
   min-height: 100vh;
+  background-color: #c3cbdc;
+    background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
 }
 
 code {
@@ -14,3 +16,9 @@ code {
     monospace;
 }
 
+
+@media only screen and(max-width:900px){
+  html{
+    font-size: 90%;
+  }
+}
