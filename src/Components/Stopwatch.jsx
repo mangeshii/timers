@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 
 const StopWatch = () => {
-    const [timer, setTimer] = useState(7140000);
+    const [timer, setTimer] = useState(0);
     const [isPaused, setPause] = useState(false);
     const countRef = useRef(null);
 
