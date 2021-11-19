@@ -1,0 +1,36 @@
+.countdown-wrapper {
+    border: 2px solid red;
+    height: 100vh;
+}
+.inner-container {
+    border: 2px solid green;
+    max-width: 600px;
+    min-height: 400px;
+    margin: auto;
+    margin-top: 10%;
+    padding:2rem
+}
+.counter{
+    height:170px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    width:100%;
+    padding:1rem 0;
+    border: none;
+    border-bottom: 2px solid gray;
+    background: transparent;
+    font-size: 1rem;
+}
+.btns{
+    margin-top: 1.5rem;
+}
+button{
+    width:100%;
+    padding:1rem 0;
+    font-size: 1rem;
+    margin: 5px;
+}
