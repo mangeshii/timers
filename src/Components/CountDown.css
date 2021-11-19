@@ -104,6 +104,10 @@ select:focus {
     ul li img{
         height:2rem
       }
+    .start{
+        margin-bottom: 0;
+        margin-top: 1.5rem;
+    }
 }
 @media screen and (max-width: 300px) {
     .counter-cd h1 {
