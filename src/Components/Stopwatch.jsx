@@ -5,15 +5,15 @@ import { Link } from "react-router-dom";
 
 
 const StopWatch = () => {
-    const [timer, setTimer] = useState(0);
+    const [timer, setTimer] = useState(7140000);
     const [isPaused, setPause] = useState(false);
     const countRef = useRef(null);
 
     const handleStart = () => {
         setPause(true);
         countRef.current = setInterval(() => {
-            setTimer((timer) => timer + 1);
-        }, 1000);
+            setTimer((timer) => timer + 10);
+        }, 10);
     };
 
     const handlePause = () => {
@@ -28,12 +28,13 @@ const StopWatch = () => {
     };
 
     const formatTime = () => {
-        const getSeconds = `0${timer % 60}`.slice(-2);
-        const minutes = `${Math.floor(timer / 60)}`;
-        const getMinutes = `0${minutes % 60}`.slice(-2);
-        const getHours = `0${Math.floor(timer / 3600)}`.slice(-2);
 
-        return `${getHours} : ${getMinutes} : ${getSeconds}`;
+        const getmilliSeconds = `0${Math.floor(timer / 10)%100}`.slice(-2);
+        const getSeconds = `0${Math.floor(timer / 1000) % 60}`.slice(-2);
+        const getMinutes = `0${Math.floor(timer / 60000) % 60}`.slice(-2);
+        const getHours = `0${Math.floor(timer / 3600000) % 60}`.slice(-2);
+
+        return `${getHours}:  ${getMinutes} : ${getSeconds} :${getmilliSeconds}`;
     };
 
     return (

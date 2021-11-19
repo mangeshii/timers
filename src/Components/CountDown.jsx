@@ -34,11 +34,8 @@ const CountDown = () => {
     const formatTimeCD = () => {
         const getSecond = `0${initialState % 60}`.slice(-2);
         const minutes = `${Math.floor(initialState / 60)}`;
-        console.log(minutes);
         const getMinute = `0${minutes % 60}`.slice(-2);
-        // console.log(getMinutes);
         const getHour = `0${Math.floor(initialState / 3600)}`.slice(-2);
-        // console.log(getHours);
 
         return `${getHour} : ${getMinute} : ${getSecond} `;
     };
