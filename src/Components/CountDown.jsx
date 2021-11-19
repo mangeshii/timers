@@ -1,5 +1,7 @@
 import "./CountDown.css";
 import { useState, useRef } from "react";
+import stopwatch from "../Images/stopwatch.png";
+import { Link } from "react-router-dom";
 
 const CountDown = () => {
     const [initialState, setInitialSet] = useState(0);
@@ -29,42 +31,59 @@ const CountDown = () => {
         setInitialSet(event.target.value);
     };
 
-    const formatTime = () => {
-        const getSeconds = `0${initialState % 60}`.slice(-2);
-        console.log(getSeconds);
+    const formatTimeCD = () => {
+        const getSecond = `0${initialState % 60}`.slice(-2);
         const minutes = `${Math.floor(initialState / 60)}`;
         console.log(minutes);
-        const getMinutes = `0${minutes % 60}`.slice(-2);
-        console.log(getMinutes);
-        const getHours = `0${Math.floor(initialState / 3600)}`.slice(-2);
-        console.log(getHours);
+        const getMinute = `0${minutes % 60}`.slice(-2);
+        // console.log(getMinutes);
+        const getHour = `0${Math.floor(initialState / 3600)}`.slice(-2);
+        // console.log(getHours);
 
-        return `${getHours} : ${getMinutes} : ${getSeconds} `;
+        return `${getHour} : ${getMinute} : ${getSecond} `;
     };
 
     return (
-        <div className="countdown-wrapper">
-            <div className="inner-container">
-                <div className="counter">
-                    <h1>{formatTime()}</h1>
+        <>
+            <div className="countdown">
+                <div className="navbar">
+                    <ul>
+                        <Link to="/">
+                            <li>
+                                <img src={stopwatch} alt="stopwatch" />
+                            </li>
+                        </Link>
+                    </ul>
                 </div>
-                <form  onSubmit={handleStart}>
-                    <input
-                        type="text"
-                        placeholder="enter time in seconds"
-                        onChange={handleInputChange}
-                    />
-                    <button className="start" type="submit">Start</button>
-                </form>
+                <div className="countdown-wrapper">
+                    <div className="inner-container">
+                        <div className="counter-cd">
+                            <h1>{formatTimeCD()}</h1>
+                        </div>
+                        <form onSubmit={handleStart}>
+                            <input
+                                type="text"
+                                placeholder="enter time in seconds"
+                                onChange={handleInputChange}
+                            />
+                            <button className="start cd-btns" type="submit">
+                                Start
+                            </button>
+                        </form>
 
-
-                <div className="btns">
-                    {/* <button onClick={handleStart}>start</button> */}
-                    <button onClick={handlePause}>Pause</button>
-                    <button onClick={handleReset}>Reset</button>
+                        <div className="btns">
+                            {/* <button onClick={handleStart}>start</button> */}
+                            <button className="cd-btns" onClick={handlePause}>
+                                Pause
+                            </button>
+                            <button className="cd-btns" onClick={handleReset}>
+                                Reset
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 export default CountDown;

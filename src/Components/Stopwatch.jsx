@@ -1,5 +1,8 @@
 import { useState, useRef } from "react";
 import "./Stopwatch.css";
+import countdown from "../Images/countdown.png";
+import { Link } from "react-router-dom";
+
 
 const StopWatch = () => {
     const [timer, setTimer] = useState(0);
@@ -34,6 +37,18 @@ const StopWatch = () => {
     };
 
     return (
+        <>
+        <div className="stopwatch">
+
+        <div className="navbar">
+                <ul>
+                    <Link  to="/countdown">
+                        <li>
+                            <img src={countdown} alt="countdown" />
+                        </li>
+                    </Link>
+                </ul>
+            </div>
         <div className="wrapper">
             <div className="container">
                 <div className="overlap-box">
@@ -51,6 +66,9 @@ const StopWatch = () => {
                 </div>
             </div>
         </div>
+
+        </div>
+        </>
     );
 };
 

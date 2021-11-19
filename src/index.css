@@ -16,7 +16,28 @@ code {
     monospace;
 }
 
+.navbar{
+  padding: 1rem 0;
+  position: absolute;
+  width:100%;
+  display: flex;
+  justify-content: flex-end;
 
+}
+ul{
+  display: flex;
+  list-style: none;
+  width:fit-content;
+  padding-left: 0% !important;
+  margin-right: 5rem;
+
+}
+ul li{
+    margin:0 1rem ;
+}
+ ul li img{
+   height:3rem
+ }
 @media only screen and(max-width:900px){
   html{
     font-size: 90%;

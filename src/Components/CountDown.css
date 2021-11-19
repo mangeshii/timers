@@ -1,100 +1,112 @@
+
 .countdown-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 2px solid transparent;
     height: 100vh;
-    background: linear-gradient(135deg, #211a4c 0%,#8200ff 100%);
+    background: linear-gradient(135deg, #211a4c 0%, #8200ff 100%);
 }
 .inner-container {
-    max-width: 550px;
-    min-height: 400px;
     margin: auto;
-    margin-top: 10%;
-    padding:2rem;
+    padding: 3rem ;
     background-color: white;
 }
-.counter{
-    height:170px;
-    width:100%;
+.counter-cd {
+    height: 140px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.counter h1{
+.counter-cd h1 {
     font-size: 5rem;
 }
-input{
-    width:100%;
-    padding:1rem 0;
+input {
+
+    width: 100%;
+    padding: 1rem 0;
     border: none;
     border-bottom: 2px solid purple;
     background: transparent;
     font-size: 1rem;
 }
-input:focus, textarea:focus, select:focus{
+input:focus,
+textarea:focus,
+select:focus {
     outline: none;
 }
-.start{
+.start:hover {
+    background-color: #8200ff;
+}
+.btns {
+    margin-top: 0.5rem;
+}
+.cd-btns {
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    margin: 5px;
+    border: none;
+}
+.start {
     margin-bottom: 0px;
     margin-top: 2rem;
     background-color: #211a4c;
-    color:white;
+    color: white;
     border: none;
 }
-.start:hover{
-    background-color: #8200ff
-}
-.btns{
-    margin-top: .5rem;
-}
-button{
-    width:100%;
-    padding:1rem 0;
-    font-size: 1.5rem;
-    margin: 5px;
-    border:none
-}
 
-@media screen and (max-width:700px) {
-    .inner-container{
+@media screen and (max-width: 700px) {
+    .inner-container {
         max-width: 450px;
         min-height: 320px;
-
     }
-    .counter{
-        height:120px
+    .counter-cd {
+        height: 120px;
     }
-    .counter h1{
+    .counter-cd h1 {
         font-size: 4rem;
     }
-    button{
-        width:100%;
-        padding:.7rem 0;
+    .cd-btns {
+        width: 100%;
+        padding: 0.7rem 0;
         font-size: 1rem;
         margin: 5px;
     }
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
     .countdown-wrapper {
-        border: 2px solid transparent;
         height: 100vh;
-        background: white
-    }
-    .inner-container{
-        max-width: 350px;
-        min-height: 220px;
+        background: white;
 
     }
-    .counter h1{
+    .inner-container {
+        max-width: 350px;
+        min-height: 220px;
+        margin-top: 6rem;
+    }
+    .counter-cd h1 {
         font-size: 3rem;
     }
-    button{
-        width:100%;
-        padding:.5rem 0;
+    .cd-btns {
+        width: 100%;
+        padding: 0.5rem 0;
         font-size: 1rem;
         margin: 5px;
     }
+    .navbar{
+        padding:0;
+    }
+    ul{
+        margin-right: 2rem;
+    }
+    ul li img{
+        height:2rem
+      }
 }
-@media screen and (max-width:300px){
-    .counter h1{
+@media screen and (max-width: 300px) {
+    .counter-cd h1 {
         font-size: 2rem;
     }
 }
