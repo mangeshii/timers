@@ -57,19 +57,18 @@ const CountDown = () => {
                         <div className="counter-cd">
                             <h1>{formatTimeCD()}</h1>
                         </div>
-                        <form onSubmit={handleStart}>
                             <input
                                 type="text"
                                 placeholder="enter time in seconds"
                                 onChange={handleInputChange}
                             />
+                        <form onSubmit={handleStart}>
                             <button className="start cd-btns" type="submit">
                                 Start
                             </button>
                         </form>
 
                         <div className="btns">
-                            {/* <button onClick={handleStart}>start</button> */}
                             <button className="cd-btns" onClick={handlePause}>
                                 Pause
                             </button>

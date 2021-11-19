@@ -34,7 +34,7 @@ const StopWatch = () => {
         const getMinutes = `0${Math.floor(timer / 60000) % 60}`.slice(-2);
         const getHours = `0${Math.floor(timer / 3600000) % 60}`.slice(-2);
 
-        return `${getHours}:  ${getMinutes} : ${getSeconds} :${getmilliSeconds}`;
+        return `${getHours} : ${getMinutes} : ${getSeconds} : ${getmilliSeconds}`;
     };
 
     return (
