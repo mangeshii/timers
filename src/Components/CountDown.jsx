@@ -5,10 +5,11 @@ import { Link } from "react-router-dom";
 
 const CountDown = () => {
     const [initialState, setInitialSet] = useState(0);
+    const [isPaused, setPause] = useState(false);
     const countRef = useRef(null);
 
-    const handleStart = (event) => {
-        event.preventDefault();
+    const handleStart = () => {
+        setPause(true)
         countRef.current = setInterval(() => {
             setInitialSet((cd) => cd - 1);
         }, 1000);
@@ -16,11 +17,13 @@ const CountDown = () => {
 
     const handlePause = () => {
         clearInterval(countRef.current);
+        setPause(false);
     };
 
     const handleReset = () => {
         clearInterval(countRef.current);
         setInitialSet(0);
+        setPause(false);
     };
 
     if (initialState < 0) {
@@ -57,21 +60,25 @@ const CountDown = () => {
                         <div className="counter-cd">
                             <h1>{formatTimeCD()}</h1>
                         </div>
-                            <input
-                                type="text"
-                                placeholder="enter time in seconds"
-                                onChange={handleInputChange}
-                            />
-                        <form onSubmit={handleStart}>
-                            <button className="start cd-btns" type="submit">
-                                Start
-                            </button>
-                        </form>
+                        <input
+                            type="text"
+                            placeholder="enter time in seconds"
+                            onChange={handleInputChange}
+                        />
 
                         <div className="btns">
-                            <button className="cd-btns" onClick={handlePause}>
-                                Pause
-                            </button>
+                            {!isPaused ? (
+                                <button className="start cd-btns" type="text" onClick={handleStart}>
+                                    Start
+                                </button>
+                            ) : (
+                                <button
+                                    className="cd-btns"
+                                    onClick={handlePause}
+                                >
+                                    Pause
+                                </button>
+                            )}
                             <button className="cd-btns" onClick={handleReset}>
                                 Reset
                             </button>

@@ -54,8 +54,7 @@ select:focus {
     border: none;
 }
 .start {
-    margin-bottom: 0px;
-    margin-top: 2rem;
+    margin-top: 1rem;
     background-color: #211a4c;
     color: white;
     border: none;
