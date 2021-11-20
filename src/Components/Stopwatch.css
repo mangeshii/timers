@@ -2,111 +2,105 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
     max-width: 1200px;
     margin: auto;
 }
 .container {
-    width: 30rem;
-    height: 25rem;
-    max-width: 550px;
-    background-color: #29539b;
-    background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding: 4rem 3rem;
+    background-color: white;
     border-radius: 10px;
-}
-
-.overlap-box {
-    width: 50rem;
-    position: absolute;
-    border-radius: 10px;
-    height: 10rem;
-    background-color: #b1bfd8;
-    background-image: linear-gradient(315deg, #b1bfd8 0%, #6782b4 74%);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+        rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+        rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 .counter {
-    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
-.counter h1 {
+.count {
     font-size: 5rem;
+    padding: 1rem;
+    background-color: blueviolet;
     color: white;
+    font-weight: 300;
+    box-shadow: rgb(128, 0, 128, 0.5) 0px 20px 30px -10px;
+    border-radius: 10px;
+}
+.colon {
+    font-size: 4rem;
+    padding: 2rem 0.5rem;
+    color: blueviolet;
 }
 
 .buttons {
+    width: 100%;
+    margin-top: -2rem;
     text-align: center;
-    margin-top: -1rem;
 }
 .btn {
-    margin-right: 10px;
-    padding: 0.5rem 2rem !important;
-    border-radius: 5px;
-    background-color: #c3cbdc;
-    background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
+    padding: 0.8rem 2.5rem;
+    margin: 10px;
+    font-size: 1rem;
     border: none;
-    cursor: pointer;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: rgba(128, 0, 128, 0.2) 0px 20px 25px -5px,
+        rgba(128, 0, 128, 0.04) 0px 10px 10px -5px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 755px) {
     .container {
-        width: 22rem;
-        height: 22rem;
+        padding: 2rem 2rem;
     }
-    .overlap-box {
-        width: 35rem;
+    .count {
+        font-size: 4rem !important;
+        padding: 0.4rem;
     }
-
-    .counter h1 {
-        font-size: 4rem;
+    .colon {
+        font-size: 4rem !important;
+        padding: 0.4rem;
     }
 }
-@media only screen and (max-width: 600px) {
-    .container {
-        width: 18rem;
-        height: 18rem;
+
+@media only screen and (max-width: 500px) {
+    .count {
+        font-size: 3rem !important;
     }
-    .overlap-box {
-        width: 27rem;
-    }
-    .counter h1 {
-        font-size: 3rem;
-    }
-    .buttons {
-        margin-top: -0.7rem;
+    .colon {
+        font-size: 3rem !important;
     }
     .btn {
-        padding: 0.2rem 1rem !important;
+        padding: 0.5rem 1.5rem;
     }
 }
-@media only screen and (max-width: 485px) {
-    .wrapper {
-        background-color: #526573 !important;
-        background-image: none;
-        align-items: flex-start;
-    }
-    .container {
-        background-color: #526573;
-        background-image: none;
-        margin-top: 2rem;
-        height: 22rem;
-    }
-    .overlap-box{
-        background-color: #526573;
-        background-image: none;
-        width:fit-content;
-        box-shadow: none;
 
+@media only screen and (max-width: 410px) {
+    .count {
+        font-size: 2.5rem !important;
     }
-    .buttons{
-        margin-top: 0;
+    .colon {
+        font-size: 2.5rem !important;
     }
-    .btn{
-        padding: 0.5rem 2rem !important;
+}
+@media only screen and (max-width: 375px) {
+    .count {
+        font-size: 2rem !important;
+    }
+    .colon {
+        font-size: 2rem !important;
+    }
+}
+@media only screen and (max-width: 300px) {
+    .count {
+        font-size: 1.5rem !important;
+    }
+    .colon {
+        font-size: 1.5rem !important;
     }
 }
