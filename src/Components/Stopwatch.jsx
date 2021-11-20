@@ -39,6 +39,7 @@ const StopWatch = () => {
                     </ul>
                 </div>
                 <div className="wrapper">
+
                     <div className="container">
                         <div className="counter">
                             <h1 className="count">

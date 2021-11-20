@@ -24,8 +24,8 @@
 }
 input {
 
-    width: 100%;
-    padding: 1rem 0;
+    width: 97%;
+    padding: 1rem .7rem;
     border: none;
     border-bottom: 2px solid purple;
     background: transparent;
@@ -36,8 +36,12 @@ textarea:focus,
 select:focus {
     outline: none;
 }
+.cd-btns:hover{
+    background-color: #cdcdcd;
+}
 .start:hover {
     background-color: #8200ff;
+
 }
 .btns {
     margin-top: 0.5rem;
@@ -109,8 +113,9 @@ select:focus {
         margin-top: 1.5rem;
     }
 }
-@media screen and (max-width: 300px) {
+
+@media screen and (max-width: 330px) {
     .counter-cd h1 {
-        font-size: 2rem;
+        font-size: 2rem !important;
     }
 }
